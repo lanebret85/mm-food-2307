@@ -1,0 +1,12 @@
+<p>Results Found: <%= @facade.search.total_hits %></p>
+
+<% @facade.foods.each do |food| %>
+  <ol>
+    <li><%= food.description %></li>
+  </ol>
+  <ul>
+    <li>GTIN/UPC Code: <%= food.gtin_upc %></li>
+    <li>Brand Owner: <%= food.brand_owner %></li>
+    <li>Ingredients: <%= food.ingredients %></li>
+  </ul>
+<% end %>
